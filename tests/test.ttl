@@ -1,0 +1,15 @@
+@prefix organon: <https://organon.dev/ns#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+
+organon:Function    a rdfs:Class .
+organon:hasArgument a rdf:Property .
+organon:calls       a rdf:Property .
+
+organon:Buffer organon:hasValue "Hello, World!" .
+
+organon:HelloWorld a organon:Function ;
+    organon:hasArgument organon:Buffer ;
+    organon:calls organon:print .
+
+organon:Thread organon:start organon:HelloWorld .
